@@ -1,6 +1,4 @@
-import { createApp } from 'vue';
-import App from './App.vue';
-import $ from 'jquery'; // jQuery をインポート
+import { createApp } from "vue";
+import App from "./App.vue";
 
-createApp(App).mount('#app');
-window.$ = $;  // jQuery をグローバル変数として window に割り当て
+createApp(App).mount("#app");

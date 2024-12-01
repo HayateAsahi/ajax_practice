@@ -9,21 +9,14 @@
         <button @click="addTask">タスク追加</button>
 
         <ul id="task-list">
-            <li v-for="task in tasks" :key="task.id">
-                <span :class="{ completed: task.completed }">{{
-                    task.title
-                }}</span>
-                <button @click="toggleTask(task)">完了</button>
-                <button @click="deleteTask(task.id)">削除</button>
-            </li>
         </ul>
     </div>
 </template>
 
 <script>
-import $ from "jquery";
 
 export default {
+
     data() {
         return {
             tasks: [],

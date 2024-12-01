@@ -36,11 +36,15 @@ class TaskController extends Controller
     // タスクの状態を更新
     public function update(Request $request, $id)
     {
+        $request->validate([
+            'completed' => 'required|boolean',
+        ]);
+
         $task = Task::findOrFail($id);
         $task->update([
             'completed' => $request->completed
         ]);
-        
+
         return response()->json($task);
     }
 }
